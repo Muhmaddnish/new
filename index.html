@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:5173/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./index_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/Navbar.css">/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #1a1a1a, #000);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700; /* Make logo bold */
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links-desktop a {
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600; /* Slightly bold links */
+}
+
+.nav-links-desktop a:hover {
+  color: #7f00ff;
+}
+
+.nav-links-desktop svg {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600; /* Slightly bold icons */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  transition: color 0.3s;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600; /* Slightly bold mobile links */
+}
+
+.nav-links a:hover {
+  color: #7f00ff;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #1a1a1a, #000);
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.mobile-menu li {
+  margin: 0.5rem 0;
+}
+
+.mobile-social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.mobile-social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600; /* Slightly bold mobile icons */
+}
+
+@media (max-width: 768px) {
+  .nav-links-desktop {
+      display: none;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/Home.css">/* Home Section */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px; /* Adjusted padding */
+  background: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1500&auto=format&fit=crop&q=80") no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  box-sizing: border-box; /* Added box-sizing */
+}
+
+/* Home Text */
+.home-content {
+  max-width: 700px;
+  padding: 0 20px; /* Added padding for mobile */
+}
+
+.home-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2; /* Improved line height */
+}
+
+.home-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  line-height: 1.6; /* Improved line height */
+}
+
+/* Home Button */
+.home-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem; /* Adjusted font size */
+  font-weight: bold;
+  color: white;
+  background: #7f00ff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #e100ff;
+}
+
+/* Responsive Image */
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  max-width: 90%; /* Added max width */
+  height: auto; /* Added auto height */
+}
+
+@media (max-width: 768px) {
+  .home-title {
+      font-size: 2rem;
+  }
+  .profile-pic {
+      width: 200px;
+      height: 200px;
+  }
+  .home-content {
+      padding: 0 10px;
+  }
+  .home-text {
+      font-size: 1.1rem;
+  }
+  .home-btn {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-title {
+      font-size: 1.8rem;
+  }
+  .home-text {
+      font-size: 1rem;
+  }
+  .home-btn {
+      padding: 10px 20px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/About.css">/* About.css */
+
+* {
+  font-family: Nunito, sans-serif;
+  box-sizing: border-box;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding: 2px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.text-blk {
+  padding: 10px;
+  line-height: 1.6;
+}
+
+.responsive-container-block.bigContainer {
+  padding: 10px 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #1a1a1a, #000); /* Dark gradient background */
+  color: white; /* Set text color to white */
+  min-height: 100vh; /* Make it at least as tall as the viewport */
+}
+
+.mainImg {
+  width: 55%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px 7px;
+  border-radius: 10px;
+}
+
+.text-blk.headingText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: white; /* Changed color to white */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.allText {
+  width: 40%;
+  margin: 0;
+}
+
+.text-blk.subHeadingText {
+  color: white; /* Changed color to white */
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.text-blk.description {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: white; /* Changed color to white */
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.explore {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  background-color: rgb(244, 152, 146);
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.explore:hover {
+  background-color: rgb(255, 235, 234);
+  color: rgb(244, 152, 146);
+}
+
+.responsive-container-block.Container {
+  margin: 80px auto 50px auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 1320px;
+  padding: 10px;
+}
+
+.responsive-container-block.Container.bottomContainer {
+  margin: 100px auto 50px auto;
+  flex-direction: row-reverse;
+}
+
+.allText.aboveText {
+  margin-left: 40px;
+}
+
+.allText.bottomText {
+  margin-right: 40px;
+}
+
+@media (max-width: 1024px) {
+  .responsive-container-block.Container {
+      max-width: 850px;
+  }
+
+  .mainImg {
+      width: 55%;
+  }
+
+  .text-blk.description {
+      font-size: 1.25rem;
+  }
+
+  .allText {
+      width: 40%;
+      margin-left: 20px;
+  }
+
+  .responsive-container-block.bigContainer {
+      padding: 10px;
+  }
+
+  .text-blk.subHeadingText {
+      font-size: 1.35rem;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+      margin: 80px auto 50px auto;
+  }
+
+  .responsive-container-block.Container {
+      max-width: 830px;
+  }
+
+  .allText.aboveText {
+      margin-top: 30px;
+      margin-left: 40px;
+  }
+
+  .allText.bottomText {
+      margin-top: 30px;
+      margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainImg {
+      width: 90%;
+  }
+
+  .allText {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0 0 0;
+  }
+
+  .responsive-container-block.Container {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .text-blk.headingText,
+  .text-blk.subHeadingText,
+  .text-blk.description {
+      text-align: center;
+      font-size: 1.5rem;
+  }
+
+  .responsive-container-block.Container {
+      margin: 80px auto 50px auto;
+  }
+
+  .responsive-container-block.Container.bottomContainer {
+      margin: 50px auto 50px auto;
+  }
+
+  .allText.aboveText,
+  .allText.bottomText {
+      margin: 40px 0 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .responsive-container-block.Container {
+      padding: 10px 0;
+      width: 100%;
+      max-width: 100%;
+  }
+
+  .mainImg {
+      width: 100%;
+  }
+
+  .responsive-container-block.bigContainer {
+      padding: 10px 25px;
+  }
+
+  .text-blk.subHeadingText,
+  .text-blk.description {
+      font-size: 1.3rem;
+      padding: 0;
+  }
+
+  .allText {
+      padding: 0;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/Skills.css">.skills-section {
+  background-color: #0b011f;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .skills-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.skills-content {
+  flex: 1;
+  margin-right: 2rem;
+  margin-bottom: 2rem; /* Add margin for mobile layout */
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.skills-description {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.skill {
+  margin-bottom: 1rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  height: 8px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #7b2cbf;
+  border-radius: 5px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  background-color: #7b2cbf;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: background 0.3s;
+}
+
+.whatsapp-button:hover {
+  background-color: #5a189a;
+}
+
+.skills-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+  .skills-container {
+    padding: 1rem; /* Add padding for mobile */
+  }
+
+  .skills-content {
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+
+  .skills-image-container {
+    margin-top: 2rem; /* Add spacing between content and image on mobile */
+  }
+
+  .skills-title {
+    font-size: 1.8rem; /* Adjust title font size for mobile */
+  }
+
+  .skills-description {
+    font-size: 0.9rem; /* Adjust description font size for mobile */
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+    .skills-section {
+        padding: 3rem 1rem;
+    }
+    .skills-title {
+        font-size: 1.6rem;
+    }
+    .skills-description {
+        font-size: 0.85rem;
+    }
+    .whatsapp-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/Project.css">/* Project.css */
+
+.projects-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #1a1a1a, #000);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.projects-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted minmax value */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  height: 400px; /* Fixed height for all cards */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column; /* Align content vertically */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1; /* Allow content to take up available space */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column; /* Align content vertically */
+  justify-content: space-between; /* Distribute space between content elements */
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.project-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.project-tech {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Align button to the start of the cross axis */
+}
+
+.project-button:hover {
+  background: linear-gradient(to right, #e100ff, #7f00ff);
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+      padding: 3rem 1rem;
+  }
+
+  .projects-title {
+      font-size: 2rem;
+  }
+
+  .projects-description {
+      font-size: 1rem;
+  }
+
+  .projects-container {
+      grid-template-columns: 1fr;
+  }
+
+  .project-card {
+      height: auto; /* Allow height to adjust on smaller screens */
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/Contact.css">.contact-section {
+  background-color: #0b011f;
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .contact-container {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.contact-info div i {
+  color: #7b2cbf;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box; /* Crucial for responsiveness */
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.send-button {
+  background: linear-gradient(45deg, #7b2cbf, #9d4edd);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-button:hover {
+  background: linear-gradient(45deg, #5a189a, #7b2cbf);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+  .contact-info {
+      margin-right: 0;
+      text-align: center;
+  }
+
+  .contact-title {
+      font-size: 1.8rem;
+  }
+
+  .contact-info div {
+      justify-content: center;
+  }
+
+  .contact-info div i {
+      margin-right: 5px;
+  }
+
+  .contact-form {
+      max-width: 100%;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .contact-section {
+      padding: 3rem 1rem;
+  }
+  .contact-title {
+      font-size: 1.6rem;
+  }
+  .send-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/index.css">/* Global CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in elements' total width and height */
+}</style><style type="text/css" data-vite-dev-id="C:/Users/DANISH/Desktop/my/Portfolio/src/components/Footer.css">/* Footer.css */
+
+.footer {
+    background-color: #1A1A1A; /* Dark background color */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: white; /* White line */
+    margin-bottom: 1rem;
+  }
+  
+  .copyright {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 1.5rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 1rem;
+    }
+  }</style></head>
+  <body>
+    <div id="root"><nav class="navbar"><div class="logo" style="opacity: 1; transform: none;"><span class="gradient-text">Muhammad Danish</span></div><div class="menu-icon" tabindex="0"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><div class="nav-links-desktop"><a href="http://localhost:5173/" data-discover="true">Home</a><a href="http://localhost:5173/about" data-discover="true">About Me</a><a href="http://localhost:5173/skills" data-discover="true">Skills</a><a href="http://localhost:5173/contact" data-discover="true">Contact</a><a href="http://localhost:5173/#" target="_blank" rel="noopener noreferrer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a><a href="http://localhost:5173/#" target="_blank" rel="noopener noreferrer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a><a href="http://localhost:5173/#" target="_blank" rel="noopener noreferrer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a><a href="http://localhost:5173/#" target="_blank" rel="noopener noreferrer"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></div></nav><section class="home-container"><div class="home-content" style="opacity: 1; transform: none;"><h1 class="home-title"><span style="opacity: 1; transform: none;">I</span><span style="opacity: 1; transform: none;">'</span><span style="opacity: 1; transform: none;">m</span><span style="opacity: 1; transform: none;"> </span><span style="opacity: 1; transform: none;">a</span><span style="opacity: 1; transform: none;"> </span><span style="opacity: 1; transform: none;">F</span><span style="opacity: 1; transform: none;">r</span><span style="opacity: 1; transform: none;">o</span><span style="opacity: 1; transform: none;">n</span><span style="opacity: 1; transform: none;">t</span><span style="opacity: 1; transform: none;">e</span><span style="opacity: 1; transform: none;">n</span><span style="opacity: 1; transform: none;">d</span><span style="opacity: 1; transform: none;"> </span><span style="opacity: 1; transform: none;">D</span><span style="opacity: 1; transform: none;">e</span><span style="opacity: 1; transform: none;">v</span><span style="opacity: 1; transform: none;">e</span><span style="opacity: 1; transform: none;">l</span><span style="opacity: 1; transform: none;">o</span><span style="opacity: 1; transform: none;">p</span><span style="opacity: 1; transform: none;">e</span><span style="opacity: 1; transform: none;">r</span></h1><p class="home-text" style="opacity: 1; transform: none;">Passionate about creating interactive and high-quality web applications. I build stunning, responsive websites using React, Tailwind, and Framer Motion.</p><a href="http://localhost:5173/Muhammad-Danish-CV-.pdf" download="" class="home-btn" tabindex="0">Download CV</a></div><div class="home-image" style="opacity: 1; transform: none;"></div></section><div class="responsive-container-block bigContainer" style="background: linear-gradient(to right, rgb(26, 26, 26), rgb(0, 0, 0)); color: white; opacity: 0; transform: translateY(50px);"><div class="responsive-container-block Container"><img class="mainImg" alt="About Me" src="./index_files/eaboutus1.svg" style="opacity: 0; transform: translateX(-50px);"><div class="allText aboveText" style="opacity: 0; transform: translateX(50px);"><p class="text-blk headingText">About Me</p><p class="text-blk subHeadingText">As a frontend developer with 6 months of experience and entering my 8th semester in BSCS, I'm fueled by my passion for technology and innovation. With a strong foundation in programming and a focus on FullStack development, I am dedicated to creating engaging and user-centric digital experiences.</p><p class="text-blk description">My journey has been enriched by two-month internships at<a href="https://www.netsoltech.com/" class="about-link">Netsol Technologies Lahore</a>, where I gained valuable insights into industry practices and honed my skills in developing responsive and dynamic web applications. These experiences have further fueled my enthusiasm for crafting intuitive and cutting-edge solutions that push the boundaries of digital interaction.</p></div></div></div><section class="skills-section" style="opacity: 0; transform: translateY(50px);"><div class="skills-container"><div class="skills-content" style="opacity: 0; transform: translateX(-50px);"><h2 class="skills-title">Skills</h2><p class="skills-description">Driven by a passion for UI front-end development, I'm committed to mastering the craft of creating dynamic and interactive user interfaces.</p><div class="skill"><div class="skill-header"><span>HTML</span><span>75%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>CSS</span><span>65%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>Bootstrap</span><span>70%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>Javascript</span><span>50%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>React</span><span>50%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>Visual Studio Code</span><span>70%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>Figma</span><span>70%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><div class="skill"><div class="skill-header"><span>Adobe Photoshop</span><span>70%</span></div><div class="progress-bar"><div class="progress" style="width: 0%;"></div></div></div><a href="https://wa.me/+923255474958" class="whatsapp-button">Whatsapp Me</a></div><div class="skills-image-container" style="opacity: 0; transform: translateX(50px);"><img alt="Skills Illustration" class="skills-image" src="./index_files/photo-1546410531-bb4caa6b424d"></div></div></section><section class="projects-section" style="opacity: 0; transform: translateY(50px);"><h2 class="projects-title">Project Showcase</h2><p class="projects-description">Explore my recent projects demonstrating innovation and excellence.</p><div class="projects-container"><div class="project-card" style="background-image: url(&quot;https://media.istockphoto.com/id/1212539033/photo/missing-person-write-on-a-book-isolated-on-black-table.webp?a=1&amp;b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=_03MjbzB7iIE2zhvcQidQ2S5BQZ4tanPMLtti2veA-s=&quot;); opacity: 0; transform: translateX(-50px);"><div class="project-content"><h3 class="project-title">Missing Person Reporting and Detection System (FYP)</h3><p class="project-text">Built a web application to help locate missing persons using face-matching technology. Designed a mobile-friendly and intuitive UI using React.js and Tailwind CSS. Integrated AI-based facial recognition for accurate matching. Developed a Python backend for data processing and storage.</p><p class="project-tech">Tech Stack: React.js, Tailwind CSS, Python, OpenCV,</p><a href="http://localhost:5173/#" class="project-button">View Project</a></div></div><div class="project-card" style="background-image: url(&quot;https://images.unsplash.com/photo-1599623560574-39d485900c95?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG95cyUyQ2Vjb21tZXJjZXxlbnwwfHwwfHx8MA%3D%3D&quot;); opacity: 0; transform: translateX(50px);"><div class="project-content"><h3 class="project-title">E-Commerce Toy Store Website (Personal Project)</h3><p class="project-text">Developed a responsive e-commerce platform for a toy store. Created a cart management system with Redux Toolkit.</p><p class="project-tech">Tech Stack: React.js, Redux Toolkit, Tailwind CSS</p><a href="http://localhost:5173/#" class="project-button">View Project</a></div></div><div class="project-card" style="background-image: url(&quot;https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&amp;auto=format&amp;fit=crop&amp;q=60&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8VGFzayUyME1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D&quot;); opacity: 0; transform: translateX(-50px);"><div class="project-content"><h3 class="project-title">Task Management App (Personal Project)</h3><p class="project-text">Built a task management app with CRUD operations. Used React hooks and context API for state management.</p><p class="project-tech">Tech Stack: React.js, Node.js, Express.js, MongoDB</p><a href="http://localhost:5173/#" class="project-button">View Project</a></div></div></div></section><section class="contact-section" style="opacity: 0; transform: translateY(50px);"><div class="contact-container" style="opacity: 0; transform: scale(0.8);"><div class="contact-info" style="opacity: 0; transform: translateX(-50px);"><h2 class="contact-title">Get In Touch With Me!</h2><div><i class="fas fa-map-marker-alt"></i><span>Rawalpindi, Pakistan</span></div><div><i class="fas fa-envelope"></i><span> muhaamadanish@gmail.com</span></div><div><i class="fas fa-phone"></i><span>+923255474958</span></div></div><form class="contact-form" style="opacity: 0; transform: translateX(50px);"><input placeholder="Your Name" required="" type="text"><input placeholder="Your Email Address" required="" type="email"><input placeholder="Your Phone Number" required="" type="tel"><textarea placeholder="Your Message" required=""></textarea><button type="submit" class="send-button">Send Message</button></form></div></section><footer class="footer" style="opacity: 0; transform: translateY(50px);"><div class="footer-content"><div class="line"></div><p class="copyright">© 2025 Muhammad Danish. All rights reserved.</p></div></footer></div>
+    <script type="module" src="./index_files/main.jsx"></script>
+  
+
+</body></html>
